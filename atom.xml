@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Rubin&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.liruibin.cn/"/>
+  <updated>2018-11-09T09:14:52.148Z</updated>
+  <id>http://www.liruibin.cn/</id>
+  
+  <author>
+    <name>Rubin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>怎么将Github的Pages做成Blog</title>
+    <link href="http://www.liruibin.cn/2018/11/09/HowToCreatePagesGithubAsBlog/"/>
+    <id>http://www.liruibin.cn/2018/11/09/HowToCreatePagesGithubAsBlog/</id>
+    <published>2018-11-09T08:45:43.000Z</published>
+    <updated>2018-11-09T09:14:52.148Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h4><p>  <code>好记性不如烂笔头.</code>有事儿没事把自己所做所想写一下,不然忘记等于白活…</p><h4 id="Think-how"><a href="#Think-how" class="headerlink" title="Think how?"></a>Think how?</h4><ol><li>申请个github账号.</li><li>开通pages(看说明一般是创建一个[账户名.github.io]的仓库, 说明有helloworld的例子)</li><li>选一种blog(eg:hexo, jekyll等).</li><li>美化主题 上传内容.</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Why&quot;&gt;&lt;a href=&quot;#Why&quot; class=&quot;headerlink&quot; title=&quot;Why?&quot;&gt;&lt;/a&gt;Why?&lt;/h4&gt;&lt;p&gt;  &lt;code&gt;好记性不如烂笔头.&lt;/code&gt;有事儿没事把自己所做所想写一下,不然忘记等于白活…&lt;/p&gt;
+&lt;h4 id=&quot;Th
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
