@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2018-11-10T05:58:38.713Z</updated>
+  <updated>2018-11-10T07:09:23.392Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>准备给孩子的问题</title>
+    <link href="http://www.liruibin.cn/2018/11/10/questionForChildren/"/>
+    <id>http://www.liruibin.cn/2018/11/10/questionForChildren/</id>
+    <published>2018-11-10T07:06:13.000Z</published>
+    <updated>2018-11-10T07:09:23.392Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>学校有什么好事发生吗？</li><li>今天你有什么好的表现？</li><li>今天有什么好收获吗？</li><li>有什么需要爸爸帮助吗？</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;学校有什么好事发生吗？&lt;/li&gt;
+&lt;li&gt;今天你有什么好的表现？&lt;/li&gt;
+&lt;li&gt;今天有什么好收获吗？&lt;/li&gt;
+&lt;li&gt;有什么需要爸爸帮助吗？&lt;/li&gt;
+&lt;/ol&gt;
+
+      
+    
+    </summary>
+    
+      <category term="随便聊聊" scheme="http://www.liruibin.cn/categories/%E9%9A%8F%E4%BE%BF%E8%81%8A%E8%81%8A/"/>
+    
+    
+      <category term="育儿" scheme="http://www.liruibin.cn/tags/%E8%82%B2%E5%84%BF/"/>
+    
+      <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>好用的工具合集</title>
@@ -41,9 +74,9 @@
       <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="工具" scheme="http://www.liruibin.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="工具" scheme="http://www.liruibin.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
