@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2018-11-14T14:40:08.752Z</updated>
+  <updated>2018-11-14T14:44:09.082Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>PHP7 Session无法存入memcache失败</title>
+    <title>PHP7 Session存入memcache失败</title>
     <link href="http://www.liruibin.cn/2018/11/14/phpSessionInMemcache/"/>
     <id>http://www.liruibin.cn/2018/11/14/phpSessionInMemcache/</id>
     <published>2018-11-14T14:11:51.000Z</published>
-    <updated>2018-11-14T14:40:08.752Z</updated>
+    <updated>2018-11-14T14:44:09.082Z</updated>
     
     <content type="html"><![CDATA[<h3 id="PHP-设置session-存储在memcache"><a href="#PHP-设置session-存储在memcache" class="headerlink" title="PHP 设置session 存储在memcache:"></a>PHP 设置session 存储在memcache:</h3><ul><li><p>方法I: 在 php.ini 中全局设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">session.save_handler = memcache</span><br><span class="line">session.save_path = &quot;tcp://127.0.0.1:11211&quot;</span><br></pre></td></tr></table></figure></li><li><p>方法II： 某个目录下的 .htaccess ：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php_value session.save_handler &quot;memcache&quot;</span><br><span class="line">php_value session.save_path  &quot;tcp://127.0.0.1:11211</span><br></pre></td></tr></table></figure></li><li><p>方法III： 再或者在某个一个应用中：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ini_set(&quot;session.save_handler&quot;, &quot;memcache&quot;);</span><br><span class="line">ini_set(&quot;session.save_path&quot;, &quot;tcp://127.0.0.1:11211&quot;);</span><br></pre></td></tr></table></figure><p>使用多个 memcached server 时用逗号”,”隔开，并且和 Memcache::addServer() 文档中说明的一样，<br>可以带额外的参数”persistent”、”weight”、”timeout”、”retry_interval” 等等，<br>类似这样的：”tcp://host1:port1?persistent=1&amp;weight=2,tcp://host2:port2” 。</p></li></ul><h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题:"></a>遇到问题:</h3><p>今天同事说服务器上的session无法读取,具体现象如下:</p><p>本地PHP版本5.x 上述操作方法I, 可以正常存储/获取session.</p><p><strong>服务器PHP7.2 上述操作方法I, 存储获取session失败.</strong></p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a>解决办法:</h3><p>之前从PHP5一直用的是memcache扩展,感觉应该是PHP7和这个扩展兼容性之类的问题,并在本地做了测试,</p><p>memcache扩展+PHP7.2 复现, </p><p>memcached扩展+PHP7.2解决</p><h5 id="以下任选一个"><a href="#以下任选一个" class="headerlink" title="以下任选一个:"></a>以下任选一个:</h5><ol><li>更改存储方式为文件 <code>session.save_handler = file</code>;</li><li><p>更换扩展memcache 更改为 memcached, 修改对应配置文件为:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ini_set(&quot;session.save_handler&quot;, &quot;memcached&quot;); // 是memcached不是memcache</span><br><span class="line">ini_set(&quot;session.save_path&quot;, &quot;127.0.0.1:11211&quot;); // 不要tcp:`</span><br></pre></td></tr></table></figure></li></ol><p><strong>修改完配置文件 记得重启一下服务</strong></p>]]></content>
     
