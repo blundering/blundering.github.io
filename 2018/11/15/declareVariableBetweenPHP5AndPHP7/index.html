@@ -17,16 +17,26 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>归档: 2018 | Rubin&#39;s blog</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Rubin&#39;s Blog">
-<meta property="og:url" content="http://www.liruibin.cn/archives/2018/index.html">
+  <title>PHP5和PHP7中变量声明和使用的影响 | Rubin&#39;s blog</title>
+  <meta name="description" content="为什么同事运行的好好的程序到我电脑上会出错?因为开发没有统一环境,每个人都可以建一套自己喜欢的开发环境(噗~@#$%^&amp;amp;*())同事用PHP7.0 编写的demo,我pull完代码,本地PHP7.2运行,得到结果不是预计结果. 到底咋回事呢? 排查xdebug 跑一跑看是哪不对, 咦, 为什么明明期望这个变量是个数组,但是我跑的结果不是个数组乜~ 做个测试吧打开http://3v4l.or">
+<meta name="keywords" content="PHP,坑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP5和PHP7中变量声明和使用的影响">
+<meta property="og:url" content="http://www.liruibin.cn/2018/11/15/declareVariableBetweenPHP5AndPHP7/index.html">
 <meta property="og:site_name" content="Rubin&#39;s Blog">
+<meta property="og:description" content="为什么同事运行的好好的程序到我电脑上会出错?因为开发没有统一环境,每个人都可以建一套自己喜欢的开发环境(噗~@#$%^&amp;amp;*())同事用PHP7.0 编写的demo,我pull完代码,本地PHP7.2运行,得到结果不是预计结果. 到底咋回事呢? 排查xdebug 跑一跑看是哪不对, 咦, 为什么明明期望这个变量是个数组,但是我跑的结果不是个数组乜~ 做个测试吧打开http://3v4l.or">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://images.unixcx.com/array.jpg">
+<meta property="og:image" content="http://images.unixcx.com/array1.jpg">
+<meta property="og:image" content="http://images.unixcx.com/array2.jpg">
+<meta property="og:image" content="http://images.unixcx.com/array3.jpg">
+<meta property="og:updated_time" content="2018-11-15T04:06:07.737Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rubin&#39;s Blog">
+<meta name="twitter:title" content="PHP5和PHP7中变量声明和使用的影响">
+<meta name="twitter:description" content="为什么同事运行的好好的程序到我电脑上会出错?因为开发没有统一环境,每个人都可以建一套自己喜欢的开发环境(噗~@#$%^&amp;amp;*())同事用PHP7.0 编写的demo,我pull完代码,本地PHP7.2运行,得到结果不是预计结果. 到底咋回事呢? 排查xdebug 跑一跑看是哪不对, 咦, 为什么明明期望这个变量是个数组,但是我跑的结果不是个数组乜~ 做个测试吧打开http://3v4l.or">
+<meta name="twitter:image" content="http://images.unixcx.com/array.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.liruibin.cn/archives/2018/index.html">
+  <link rel="canonical" href="http://www.liruibin.cn/2018/11/15/declareVariableBetweenPHP5AndPHP7/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Rubin&#39;s Blog" type="application/atom+xml">
   
@@ -318,98 +328,182 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2018</h1>
-	      <p class="text-muted">共 6 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <div class="content">
+  <article id="post-declareVariableBetweenPHP5AndPHP7" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
   
+    <h1 class="article-title" itemprop="name">
+      PHP5和PHP7中变量声明和使用的影响
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/11/15/declareVariableBetweenPHP5AndPHP7/" class="article-date">
+	  <time datetime="2018-11-15T03:39:51.000Z" itemprop="datePublished">2018-11-15</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/网站开发/">网站开发</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/PHP/">PHP</a>, <a class="article-tag-link" href="/tags/坑/">坑</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/15/declareVariableBetweenPHP5AndPHP7/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h3 id="为什么同事运行的好好的程序到我电脑上会出错"><a href="#为什么同事运行的好好的程序到我电脑上会出错" class="headerlink" title="为什么同事运行的好好的程序到我电脑上会出错?"></a>为什么同事运行的好好的程序到我电脑上会出错?</h3><p>因为开发没有统一环境,每个人都可以建一套自己喜欢的开发环境(噗~@#$%^&amp;*())<br>同事用PHP7.0 编写的demo,我pull完代码,本地PHP7.2运行,得到结果不是预计结果. 到底咋回事呢?</p>
+<h3 id="排查"><a href="#排查" class="headerlink" title="排查"></a>排查</h3><p><strong>xdebug</strong> 跑一跑看是哪不对, 咦, 为什么明明期望这个变量是个数组,但是我跑的结果不是个数组乜~</p>
+<h3 id="做个测试吧"><a href="#做个测试吧" class="headerlink" title="做个测试吧"></a>做个测试吧</h3><p>打开<a href="http://3v4l.org" target="_blank" rel="noopener">http://3v4l.org</a> 写个demo跑一跑吧;</p>
+<p><img src="http://images.unixcx.com/array.jpg" alt=""></p>
+<p>这个看起来是正常的~ 嗯? 第三行注释掉是什么意思呢? 来让我们放开注释看看.</p>
+<p><img src="http://images.unixcx.com/array1.jpg" alt=""></p>
+<p>啊哦~ PHP7.1+ 报错了, 这英语也看不懂啊? 复制去翻译?好麻烦, 到底咋个意思嘛? 算了 看起来是[]什么什么 </p>
+<p>那我们给[]里指定个下标继续测试</p>
+<p><img src="http://images.unixcx.com/array2.jpg" alt=""></p>
+<p>嗯? 什么情况,没报错了,但是PHP7.1+ 得到个字符串 我的数组呢? 这个乱码字符串什么意思呢? 我们继续</p>
+<p><img src="http://images.unixcx.com/array3.jpg" alt=""></p>
+<p>啊哦~ 原来如此~ <strong> 因为之前声明 $array = ‘’; 的时候 $array的类型是字符串, 下面的处理 PHP7.1+ 依旧把$array 当做字符串来操作的, 但是之前的版本,会自动转换字符串$array的类型为数组来操作</strong></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://www.liruibin.cn/2018/11/15/declareVariableBetweenPHP5AndPHP7/" title="PHP5和PHP7中变量声明和使用的影响" target="_blank" rel="external">http://www.liruibin.cn/2018/11/15/declareVariableBetweenPHP5AndPHP7/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/blundering" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/blundering" target="_blank"><span class="text-dark">跳梁者</span><small class="ml-1x">敲代码的</small></a></h3>
+        <div>先别想太多细节,多想想为什么。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
     
-      
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2018" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2018
-            </a>
-            <!-- <a href="/archives/2018" class="archive-year">2018</a> -->
-          </h3>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom="">
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2018/11/14/phpSessionInMemcache/" title="PHP7 Session存入memcache失败"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫">
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫">
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="collapse2018" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2018">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2018/11/15/declareVariableBetweenPHP5AndPHP7/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2018-11-15T03:39:51.000Z" itemprop="datePublished">2018-11-15</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> PHP5和PHP7中变量声明和使用的影响
-</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-  
-    
-    
-    
-<a href="/2018/11/14/phpSessionInMemcache/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2018-11-14T14:11:51.000Z" itemprop="datePublished">2018-11-14</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> PHP7 Session存入memcache失败
-</a>
 
-
-  
-    
-    
-    
-<a href="/2018/11/12/profession/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2018-11-12T11:15:59.000Z" itemprop="datePublished">2018-11-12</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 用专业的人做专业的事儿
-</a>
-
-
-  
-    
-    
-    
-<a href="/2018/11/10/questionForChildren/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2018-11-10T07:06:13.000Z" itemprop="datePublished">2018-11-10</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 准备给孩子的问题
-</a>
-
-
-  
-    
-    
-    
-<a href="/2018/11/10/usefulTools/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2018-11-10T05:52:23.000Z" itemprop="datePublished">2018-11-10</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 好用的工具合集
-</a>
-
-
-  
-    
-    
-    
-<a href="/2018/11/09/HowToCreatePagesGithubAsBlog/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2018-11-09T08:45:43.000Z" itemprop="datePublished">2018-11-09</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 怎么将Github的Pages做成Blog
-</a>
-
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
-  	 	
 </main>
 
   <footer class="footer" itemscope="" itemtype="http://schema.org/WPFooter">
@@ -462,6 +556,37 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: 'o7kWWMKN7PP9qxd4j3j0qh0B-gzGzoHsz',
+    appKey: 'b08H1zFCgwGPkY5VYoO5AAFU',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 

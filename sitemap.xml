@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.liruibin.cn/2018/11/15/declareVariableBetweenPHP5AndPHP7/</loc>
+    
+    <lastmod>2018-11-15T04:06:07.737Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.liruibin.cn/2018/11/14/phpSessionInMemcache/</loc>
     
     <lastmod>2018-11-14T14:44:09.082Z</lastmod>
