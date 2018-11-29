@@ -136,9 +136,9 @@
     <link href="http://www.liruibin.cn/2018/11/10/usefulTools/"/>
     <id>http://www.liruibin.cn/2018/11/10/usefulTools/</id>
     <published>2018-11-10T05:52:23.000Z</published>
-    <updated>2018-11-10T05:58:38.713Z</updated>
+    <updated>2018-11-29T01:35:03.200Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="系统类"><a href="#系统类" class="headerlink" title="系统类"></a>系统类</h4><ul><li>brew - 方便. </li><li>iTerm2 - 超级好用的终端工具.</li></ul><h4 id="文字类"><a href="#文字类" class="headerlink" title="文字类"></a>文字类</h4><ul><li>typora - markdown编辑工具, 简洁.</li></ul><h4 id="网络类"><a href="#网络类" class="headerlink" title="网络类"></a>网络类</h4><ul><li>frp - 网络穿透,方便.</li></ul><h4 id="图片类"><a href="#图片类" class="headerlink" title="图片类"></a>图片类</h4><ul><li>LICEcap - 屏幕截图生成GIF,小巧.</li></ul>]]></content>
+    <content type="html"><![CDATA[<h4 id="系统类"><a href="#系统类" class="headerlink" title="系统类"></a>系统类</h4><ul><li>brew - 方便. </li><li>iTerm2 - 超级好用的终端工具.</li><li>Synergy - linux,mac,windows 鼠标键盘共享</li></ul><h4 id="文字类"><a href="#文字类" class="headerlink" title="文字类"></a>文字类</h4><ul><li>typora - markdown编辑工具, 简洁.</li></ul><h4 id="网络类"><a href="#网络类" class="headerlink" title="网络类"></a>网络类</h4><ul><li>frp - 网络穿透,方便.</li></ul><h4 id="图片类"><a href="#图片类" class="headerlink" title="图片类"></a>图片类</h4><ul><li>LICEcap - 屏幕截图生成GIF,小巧.</li><li>shutter - linux截屏软件.</li></ul>]]></content>
     
     <summary type="html">
     
@@ -147,8 +147,7 @@
         &lt;h4 id=&quot;系统类&quot;&gt;&lt;a href=&quot;#系统类&quot; class=&quot;headerlink&quot; title=&quot;系统类&quot;&gt;&lt;/a&gt;系统类&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;brew - 方便. &lt;/li&gt;
 &lt;li&gt;iTerm2 - 超级好用的终端工具.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;
+&lt;li&gt;Synergy - 
       
     
     </summary>
@@ -156,9 +155,9 @@
       <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
-    
       <category term="工具" scheme="http://www.liruibin.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
