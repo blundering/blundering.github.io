@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2018-12-14T12:49:59.264Z</updated>
+  <updated>2018-12-14T12:56:30.169Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.liruibin.cn/2018/12/14/funnyurl/"/>
     <id>http://www.liruibin.cn/2018/12/14/funnyurl/</id>
     <published>2018-12-14T12:43:15.000Z</published>
-    <updated>2018-12-14T12:49:59.264Z</updated>
+    <updated>2018-12-14T12:56:30.169Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><a href="http://www.zhihu.com/question/31120405" target="_blank" rel="noopener">作为一名互联网设计师，你们和程序员都有过什么样的趣事</a></li><li><a href="http://www.zhihu.com/question/29235260#answer-16307347" target="_blank" rel="noopener">中国有哪些好?</a></li><li><a href="https://frontenddev.org/column/ali-11-11-2015/" target="_blank" rel="noopener">2015阿里11.11前端</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><a href="http://www.zhihu.com/question/31120405" target="_blank" rel="noopener">作为一名互联网设计师，你们和程序员都有过什么样的趣事</a></li><li><a href="http://www.zhihu.com/question/29235260#answer-16307347" target="_blank" rel="noopener">中国有哪些好?</a></li><li><a href="https://frontenddev.org/column/ali-11-11-2015/" target="_blank" rel="noopener">2015阿里11.11前端</a></li><li><a href="http://patorjk.com/software/taag/#p=testall&amp;f=Avatar&amp;t=Rubin" target="_blank" rel="noopener">ASCII画图</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -265,9 +265,9 @@
       <category term="随便聊聊" scheme="http://www.liruibin.cn/categories/%E9%9A%8F%E4%BE%BF%E8%81%8A%E8%81%8A/"/>
     
     
-      <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
-    
       <category term="育儿" scheme="http://www.liruibin.cn/tags/%E8%82%B2%E5%84%BF/"/>
+    
+      <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
