@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2018-12-14T11:05:33.032Z</updated>
+  <updated>2018-12-14T11:20:01.177Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>frp nginx 配置</title>
+    <link href="http://www.liruibin.cn/2018/12/14/frpconfig/"/>
+    <id>http://www.liruibin.cn/2018/12/14/frpconfig/</id>
+    <published>2018-12-14T11:18:04.000Z</published>
+    <updated>2018-12-14T11:20:01.177Z</updated>
+    
+    <content type="html"><![CDATA[<p>nohup /opt/frps/frps -c /opt/frps/frps.ini &gt; log.log 2&gt;&amp;1 &amp;</p><p>nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">map $scheme $frp_proxy_port &#123;</span><br><span class="line">    &quot;http&quot;  &quot;8880&quot;;</span><br><span class="line">    &quot;https&quot; &quot;8881&quot;;</span><br><span class="line">    default &quot;8880&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    listen [::]:80;</span><br><span class="line">    server_name frp.zuim.cn;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_intercept_errors on;</span><br><span class="line">        proxy_pass http://127.0.0.1:7500;</span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Nginx-Proxy true;</span><br><span class="line">        proxy_set_header Connection &quot;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    access_log off;</span><br><span class="line">    log_not_found off;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    listen [::]:80;</span><br><span class="line">    server_name *.zuim.cn;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_intercept_errors on;</span><br><span class="line">        proxy_pass  $scheme://127.0.0.1:$frp_proxy_port;</span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Nginx-Proxy true;</span><br><span class="line">        proxy_set_header Connection &quot;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    access_log off;</span><br><span class="line">    log_not_found off;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>frps<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_addr = xxx.xxx.xxx.xxx</span><br><span class="line">bind_port = 7000</span><br><span class="line"></span><br><span class="line">vhost_http_port = 8880</span><br><span class="line">vhost_https_port = 8881</span><br><span class="line"></span><br><span class="line">dashboard_port = 7500</span><br><span class="line"></span><br><span class="line">log_file = /data/logs/frps.log</span><br><span class="line">log_level = warn</span><br><span class="line">log_max_days = 3</span><br><span class="line"></span><br><span class="line">privilege_mode = true</span><br><span class="line">privilege_token = xxxxx</span><br><span class="line">privilege_allow_ports = 3790-4790</span><br><span class="line"></span><br><span class="line">max_pool_count = 50</span><br></pre></td></tr></table></figure></p><p>frpc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = x.x.x.x(替换为服务器 ip)</span><br><span class="line">server_port = 7000</span><br><span class="line"></span><br><span class="line">log_file = /opt/frp/frpc.log</span><br><span class="line">log_level = warn</span><br><span class="line">log_max_days = 3</span><br><span class="line"></span><br><span class="line">privilege_token = xxxxx(替换掉)</span><br><span class="line"></span><br><span class="line">[n54l_ssh]</span><br><span class="line">privilege_mode = true</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 22</span><br><span class="line">use_encryption = false</span><br><span class="line">use_gzip = false</span><br><span class="line">remote_port = 3794</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;nohup /opt/frps/frps -c /opt/frps/frps.ini &amp;gt; log.log 2&amp;gt;&amp;amp;1 &amp;amp;&lt;/p&gt;
+&lt;p&gt;nginx&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td 
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="frp" scheme="http://www.liruibin.cn/tags/frp/"/>
+    
+      <category term="proxy" scheme="http://www.liruibin.cn/tags/proxy/"/>
+    
+      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>对联</title>
