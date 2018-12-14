@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2018-12-14T12:56:30.169Z</updated>
+  <updated>2018-12-14T13:02:51.472Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>flutter Android studio设置socks代理</title>
+    <link href="http://www.liruibin.cn/2018/12/14/flutterideproxy/"/>
+    <id>http://www.liruibin.cn/2018/12/14/flutterideproxy/</id>
+    <published>2018-12-14T12:58:47.000Z</published>
+    <updated>2018-12-14T13:02:51.472Z</updated>
+    
+    <content type="html"><![CDATA[<p>初学flutter 使用Android studio自动下载一些依赖总是失败.需要设置一下代理,之前查找的资料大多说怎么设置http/https代理</p><p><a href="https://github.com/flutter/flutter/issues/15339" target="_blank" rel="noopener">https://github.com/flutter/flutter/issues/15339</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[   +6 ms] * Error running Gradle:</span><br><span class="line">           Exit code 1 from: /home/users/n.gendron/GitLab/n.gendron/techno_store/android/gradlew app:properties:</span><br><span class="line"></span><br><span class="line">           FAILURE: Build failed with an exception.</span><br><span class="line"></span><br><span class="line">           * What went wrong:</span><br><span class="line">           A problem occurred configuring root project &apos;android&apos;.</span><br><span class="line">           &gt; Could not resolve all files for configuration &apos;:classpath&apos;.</span><br><span class="line">              &gt; Could not resolve com.android.tools.build:gradle:3.0.1.</span><br><span class="line">                Required by:</span><br><span class="line">                    project :</span><br><span class="line">                 &gt; Could not resolve com.android.tools.build:gradle:3.0.1.</span><br><span class="line">                    &gt; Could not get resource &apos;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.0.1/gradle-3.0.1.pom&apos;.</span><br><span class="line">                       &gt; Could not GET &apos;https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.0.1/gradle-3.0.1.pom&apos;.</span><br><span class="line">                          &gt; sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</span><br><span class="line">                 &gt; Could not resolve com.android.tools.build:gradle:3.0.1.</span><br><span class="line">                    &gt; Could not get resource &apos;https://jcenter.bintray.com/com/android/tools/build/gradle/3.0.1/gradle-3.0.1.pom&apos;.</span><br><span class="line">                       &gt; Could not GET &apos;https://jcenter.bintray.com/com/android/tools/build/gradle/3.0.1/gradle-3.0.1.pom&apos;.</span><br><span class="line">                          &gt; sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</span><br><span class="line"></span><br><span class="line">           * Try:</span><br><span class="line">           Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.</span><br><span class="line"></span><br><span class="line">           * Get more help at https://help.gradle.org</span><br><span class="line"></span><br><span class="line">           BUILD FAILED in 1s</span><br><span class="line"></span><br><span class="line">[  +22 ms] &quot;flutter run&quot; took 3,235ms.</span><br></pre></td></tr></table></figure><p><del>按照Android studio设置http/https代理</del>(因为我是用的socks)</p><p><del>设置java_home/jdk_home</del></p><p>设置 socks代理<br>vim ~/.gradle/gradle.properties</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=7077</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;初学flutter 使用Android studio自动下载一些依赖总是失败.需要设置一下代理,之前查找的资料大多说怎么设置http/https代理&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/flutter/flutter/issues/1533
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="flutter" scheme="http://www.liruibin.cn/tags/flutter/"/>
+    
+      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>有趣URL汇总</title>
@@ -93,11 +121,11 @@
       <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
+      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
       <category term="frp" scheme="http://www.liruibin.cn/tags/frp/"/>
     
       <category term="proxy" scheme="http://www.liruibin.cn/tags/proxy/"/>
-    
-      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
@@ -265,9 +293,9 @@
       <category term="随便聊聊" scheme="http://www.liruibin.cn/categories/%E9%9A%8F%E4%BE%BF%E8%81%8A%E8%81%8A/"/>
     
     
-      <category term="育儿" scheme="http://www.liruibin.cn/tags/%E8%82%B2%E5%84%BF/"/>
-    
       <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="育儿" scheme="http://www.liruibin.cn/tags/%E8%82%B2%E5%84%BF/"/>
     
   </entry>
   
