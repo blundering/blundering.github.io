@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2018-12-14T13:02:51.472Z</updated>
+  <updated>2018-12-18T07:58:12.183Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记单词</title>
+    <link href="http://www.liruibin.cn/2018/12/18/reciteWords/"/>
+    <id>http://www.liruibin.cn/2018/12/18/reciteWords/</id>
+    <published>2018-12-18T07:55:12.000Z</published>
+    <updated>2018-12-18T07:58:12.183Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天听了一节别人总结的记忆单词课程.<br>确实挺有意思, 分片,归总.</p><p>记了一张图 先放上来 大家这方法看看怎么样.会不会让你事半功倍.<br><img src="http://images.unixcx.com/记单词.png" alt="记单词"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;昨天听了一节别人总结的记忆单词课程.&lt;br&gt;确实挺有意思, 分片,归总.&lt;/p&gt;
+&lt;p&gt;记了一张图 先放上来 大家这方法看看怎么样.会不会让你事半功倍.&lt;br&gt;&lt;img src=&quot;http://images.unixcx.com/记单词.png&quot; alt=&quot;记单词&quot;&gt;&lt;/p
+      
+    
+    </summary>
+    
+      <category term="跟着别人走" scheme="http://www.liruibin.cn/categories/%E8%B7%9F%E7%9D%80%E5%88%AB%E4%BA%BA%E8%B5%B0/"/>
+    
+    
+      <category term="英语" scheme="http://www.liruibin.cn/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>flutter Android studio设置socks代理</title>
