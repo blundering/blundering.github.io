@@ -17,21 +17,16 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>PHP7 Session存入memcache失败 | Rubin&#39;s blog</title>
-  <meta name="description" content="PHP 设置session 存储在memcache: 方法I: 在 php.ini 中全局设置 12session.save_handler = memcachesession.save_path = &amp;quot;tcp://127.0.0.1:11211&amp;quot;  方法II： 某个目录下的 .htaccess ： 12php_value session.save_handler &amp;quot;">
-<meta name="keywords" content="PHP,坑,网站开发">
-<meta property="og:type" content="article">
-<meta property="og:title" content="PHP7 Session存入memcache失败">
-<meta property="og:url" content="http://www.liruibin.cn/2018/11/14/phpSessionInMemcache/index.html">
+  <title>分类: 阅读 | Rubin&#39;s blog</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Rubin&#39;s Blog">
+<meta property="og:url" content="http://www.liruibin.cn/categories/阅读/index.html">
 <meta property="og:site_name" content="Rubin&#39;s Blog">
-<meta property="og:description" content="PHP 设置session 存储在memcache: 方法I: 在 php.ini 中全局设置 12session.save_handler = memcachesession.save_path = &amp;quot;tcp://127.0.0.1:11211&amp;quot;  方法II： 某个目录下的 .htaccess ： 12php_value session.save_handler &amp;quot;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-14T14:44:09.082Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP7 Session存入memcache失败">
-<meta name="twitter:description" content="PHP 设置session 存储在memcache: 方法I: 在 php.ini 中全局设置 12session.save_handler = memcachesession.save_path = &amp;quot;tcp://127.0.0.1:11211&amp;quot;  方法II： 某个目录下的 .htaccess ： 12php_value session.save_handler &amp;quot;">
+<meta name="twitter:title" content="Rubin&#39;s Blog">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.liruibin.cn/2018/11/14/phpSessionInMemcache/index.html">
+  <link rel="canonical" href="http://www.liruibin.cn/categories/阅读/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Rubin&#39;s Blog" type="application/atom+xml">
   
@@ -321,201 +316,63 @@
 </aside>
 
   
-  
-<main class="main" role="main">
-  <div class="content">
-  <article id="post-phpSessionInMemcache" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
-    
-    <div class="article-header">
-      
-        
-  
-    <h1 class="article-title" itemprop="name">
-      PHP7 Session存入memcache失败
-    </h1>
-  
-
-      
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2018/11/14/phpSessionInMemcache/" class="article-date">
-	  <time datetime="2018-11-14T14:11:51.000Z" itemprop="datePublished">2018-11-14</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/网站开发/">网站开发</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/PHP/">PHP</a>, <a class="article-tag-link" href="/tags/坑/">坑</a>, <a class="article-tag-link" href="/tags/网站开发/">网站开发</a>
-  </span>
-
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/14/phpSessionInMemcache/#comments" class="article-comment-link">评论</a></span>
-        
-      </div>
+  <main class="main" role="main">
+  <article class="content article article-categories article-type-list" itemscope="">
+    <header class="article-header">
+      <h1 itemprop="name" class="hidden-xs">分类: 阅读</h1>
+      <p class="hidden-xs">共 1 篇文章</p>
+      <nav role="navigation" id="nav-main" class="okayNav">
+        <ul>
+          <li><a href="/categories">All</a></li>
+          
+          <li><a href="/categories/阅读/">阅读</a></li>
+          
+          <li><a href="/categories/走过的路/">走过的路</a></li>
+          
+          <li><a href="/categories/轻松时刻/">轻松时刻</a></li>
+          
+          <li><a href="/categories/网站开发/">网站开发</a></li>
+          
+          <li><a href="/categories/工具/">工具</a></li>
+          
+          <li><a href="/categories/随便聊聊/">随便聊聊</a></li>
+          
+          <li><a href="/categories/跟着别人走/">跟着别人走</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <!-- /header -->
+    <div class="article-body">
+      <div class="panel panel-default b-no">
+    <div class="panel-heading" role="tab">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse阅读" aria-expanded="true">
+              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
+              阅读
+            </a>
+            <small class="text-muted">(Total 1 articles)</small>
+        </h4>
     </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <h3 id="PHP-设置session-存储在memcache"><a href="#PHP-设置session-存储在memcache" class="headerlink" title="PHP 设置session 存储在memcache:"></a>PHP 设置session 存储在memcache:</h3><ul>
-<li><p>方法I: 在 php.ini 中全局设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">session.save_handler = memcache</span><br><span class="line">session.save_path = &quot;tcp://127.0.0.1:11211&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法II： 某个目录下的 .htaccess ：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php_value session.save_handler &quot;memcache&quot;</span><br><span class="line">php_value session.save_path  &quot;tcp://127.0.0.1:11211</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法III： 再或者在某个一个应用中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ini_set(&quot;session.save_handler&quot;, &quot;memcache&quot;);</span><br><span class="line">ini_set(&quot;session.save_path&quot;, &quot;tcp://127.0.0.1:11211&quot;);</span><br></pre></td></tr></table></figure>
-<p>使用多个 memcached server 时用逗号”,”隔开，并且和 Memcache::addServer() 文档中说明的一样，<br>可以带额外的参数”persistent”、”weight”、”timeout”、”retry_interval” 等等，<br>类似这样的：”tcp://host1:port1?persistent=1&amp;weight=2,tcp://host2:port2” 。</p>
-</li>
-</ul>
-<h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题:"></a>遇到问题:</h3><p>今天同事说服务器上的session无法读取,具体现象如下:</p>
-<p>本地PHP版本5.x 上述操作方法I, 可以正常存储/获取session.</p>
-<p><strong>服务器PHP7.2 上述操作方法I, 存储获取session失败.</strong></p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a>解决办法:</h3><p>之前从PHP5一直用的是memcache扩展,感觉应该是PHP7和这个扩展兼容性之类的问题,并在本地做了测试,</p>
-<p>memcache扩展+PHP7.2 复现, </p>
-<p>memcached扩展+PHP7.2解决</p>
-<h5 id="以下任选一个"><a href="#以下任选一个" class="headerlink" title="以下任选一个:"></a>以下任选一个:</h5><ol>
-<li>更改存储方式为文件 <code>session.save_handler = file</code>;</li>
-<li><p>更换扩展memcache 更改为 memcached, 修改对应配置文件为:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ini_set(&quot;session.save_handler&quot;, &quot;memcached&quot;); // 是memcached不是memcache</span><br><span class="line">ini_set(&quot;session.save_path&quot;, &quot;127.0.0.1:11211&quot;); // 不要tcp:`</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>修改完配置文件 记得重启一下服务</strong></p>
+    <div id="collapse阅读" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading阅读">
+        <div class="panel-body">
+            <div class="collection">
+              
+                
+<a href="/2018/12/26/24careersReaderResponse/" class="collection-item" target="_blank" itemprop="url">
+  <time datetime="2018-12-26T05:20:20.000Z" itemprop="datePublished">2018-12-26</time>
+  <span>&nbsp;&nbsp;&nbsp;</span> &lt;摘抄&gt; 一位70后程序员的职场感悟
+</a>
 
-      
+
+              
+            </div>
+        </div>
     </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
-    
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="http://www.liruibin.cn/2018/11/14/phpSessionInMemcache/" title="PHP7 Session存入memcache失败" target="_blank" rel="external">http://www.liruibin.cn/2018/11/14/phpSessionInMemcache/</a>
-    </li>
-    
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
-
-
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/blundering" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/blundering" target="_blank"><span class="text-dark">跳梁者</span><small class="ml-1x">敲代码的</small></a></h3>
-        <div>先别想太多细节,多想想为什么。</div>
-      </div>
-    </figure>
-  </div>
 </div>
-
-
     </div>
   </article>
-  
-    
-  <section id="comments">
-  	
-      <div id="vcomments"></div>
-    
-  </section>
-
-
-  
-</div>
-
-  <nav class="bar bar-footer clearfix" data-stick-bottom="">
-  <div class="bar-inner">
-  
-  <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/2018/11/15/declareVariableBetweenPHP5AndPHP7/" title="PHP5和PHP7中变量声明和使用的影响"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/2018/11/12/profession/" title="用专业的人做专业的事儿"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-  </ul>
-  
-  
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
-  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
-    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
-  </div> -->
-  
-  
-  <div class="bar-right">
-    
-    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
-    
-  </div>
-  </div>
-</nav>
-  
-<!-- Modal -->
-<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content donate">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <div class="modal-body">
-        <div class="donate-box">
-          <div class="donate-head">
-            <p>感谢您的支持，我会继续努力的!</p>
-          </div>
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
-              <div class="donate-payimg">
-                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫">
-              </div>
-              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
-              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
-              <div class="donate-payimg">
-                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫">
-              </div>
-              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
-              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
-            </div>
-          </div>
-          <div class="donate-footer">
-            <ul class="nav nav-tabs nav-justified" role="tablist">
-              <li role="presentation" class="active">
-                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
-              </li>
-              <li role="presentation" class="">
-                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
+   
 </main>
 
   <footer class="footer" itemscope="" itemtype="http://schema.org/WPFooter">
@@ -568,37 +425,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-
-   
-
-
-
-
-   
-    
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine"></script>
-  <script type="text/javascript">
-  var GUEST = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link';
-  meta = meta.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#vcomments',
-    verify: false,
-    notify: false,
-    appId: 'o7kWWMKN7PP9qxd4j3j0qh0B-gzGzoHsz',
-    appKey: 'b08H1zFCgwGPkY5VYoO5AAFU',
-    placeholder: 'Just go go',
-    avatar: 'mm',
-    meta: meta,
-    pageSize: '10' || 10,
-    visitor: false
-  });
-  </script>
-
-     
 
 
 
