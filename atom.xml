@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2018-12-26T05:26:00.196Z</updated>
+  <updated>2019-01-15T04:47:01.476Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>command-tree</title>
+    <link href="http://www.liruibin.cn/2019/01/15/tree%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.liruibin.cn/2019/01/15/tree命令/</id>
+    <published>2019-01-15T04:45:06.000Z</published>
+    <updated>2019-01-15T04:47:01.476Z</updated>
+    
+    <content type="html"><![CDATA[<p>(1)tree  -a 显示所有文件和目录</p><p>(2)tree -d 显示目录名称而非内容</p><p>(3)tree -f 在每个文件或目录之前，显示完整的相对路径名称</p><p>(4)tree -F 在执行文件，目录，Socket，符号连接，管道名称名称，各自加上”*”,”/“,”=”,”@”,”|”号。</p><p>(5)tree -r 以相反次序排列</p><p>(6)tree -t 用文件和目录的更改时间排序</p><p>(7)tree -L n 只显示 n 层目录 （n 为数字）</p><p>(8)tree -dirsfirst 目录显示在前,文件显示在后</p><p>(9)可以加的参数<br>-A 使用ASNI绘图字符显示树状图而非以ASCII字符组合。<br>-C 在文件和目录清单加上色彩，便于区分各种类型。<br>-D 列出文件或目录的更改时间。<br>-g 列出文件或目录的所属群组名称，没有对应的名称时，则显示群组识别码。<br>-i 不以阶梯状列出文件或目录名称。<br>-I 不显示符合范本样式的文件或目录名称。<br>-l 如遇到性质为符号连接的目录，直接列出该连接所指向的原始目录。<br>-n 不在文件和目录清单加上色彩。<br>-N 直接列出文件和目录名称，包括控制字符。<br>-p 列出权限标示。<br>-P 只显示符合范本样式的文件或目录名称。<br>-q 用”?”号取代控制字符，列出文件和目录名称。<br>-s 列出文件或目录大小。<br>-u 列出文件或目录的拥有者名称，没有对应的名称时，则显示用户识别码。<br>-x 将范围局限在现行的文件系统中，若指定目录下的某些子目录，其存放于另一个文件系统上，则将该子目录予以排除在寻找范围外。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;(1)tree  -a 显示所有文件和目录&lt;/p&gt;
+&lt;p&gt;(2)tree -d 显示目录名称而非内容&lt;/p&gt;
+&lt;p&gt;(3)tree -f 在每个文件或目录之前，显示完整的相对路径名称&lt;/p&gt;
+&lt;p&gt;(4)tree -F 在执行文件，目录，Socket，符号连接，管道名称名称
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://www.liruibin.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="linux命令" scheme="http://www.liruibin.cn/tags/linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>&lt;摘抄&gt; 一位70后程序员的职场感悟</title>
