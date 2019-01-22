@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2019-01-21T04:59:48.554Z</updated>
+  <updated>2019-01-21T07:30:15.031Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.liruibin.cn/2019/01/21/editMacAddressOnMiui10/"/>
     <id>http://www.liruibin.cn/2019/01/21/editMacAddressOnMiui10/</id>
     <published>2019-01-21T04:48:41.000Z</published>
-    <updated>2019-01-21T04:59:48.554Z</updated>
+    <updated>2019-01-21T07:30:15.031Z</updated>
     
-    <content type="html"><![CDATA[<p>本人手机1+3t, 买的时候不知道在哪看的说是”刷机不费力…刷坏还管修…”</p><p>虽然是奔着这个目的去的,但是到手2年多 也没刷过几次. 前几天闲的蛋疼想体验回小米的系统.<br>果然 爽歪歪,时隔4年打开还算熟悉的界面, 相册,联系人,短信 aha 一个都没丢.</p><p>但是,在公司网络 wifi 总是时断时连,找了半天原来是:刷的这个H大版本的 miui10 for 1+3t 系统 wifi 的 mac 地址大家都一样…(克隆出来的?)网络中产生了冲突</p><p>那么让我们看看怎么解决.</p><ul><li>下载 <code>root explorer</code> </li><li>使用 <code>root explorer</code> 赋权并打开/修改手机文件 <code>/system/etc/firmware/wlan/qca_cal/wlan_mac.bin</code></li><li>我这里原来是空白的,所以直接添加 <code>Intf0MacAddress=000AF58989CC</code> (等号后面是你要换成的 mac 地址,没有冒号)</li></ul><p>关掉 wifi 重连一下试试, aha~ 网络冲突没有了, 终于可以安心的连公司 wifi 上网了.</p>]]></content>
+    <content type="html"><![CDATA[<p>本人手机1+3t, 买的时候不知道在哪看的说是”刷机不费力…刷坏还管修…”</p><p>虽然是奔着这个目的去的,但是到手2年多 也没刷过几次. 前几天闲的蛋疼想体验回小米的系统.<br>果然 爽歪歪,时隔4年打开还算熟悉的界面, 相册,联系人,短信 aha 一个都没丢.</p><p>但是,在公司网络 wifi 总是时断时连,找了半天原来是:刷的这个H大版本的 miui10 for 1+3t 系统 wifi 的 mac 地址大家都一样…(克隆出来的?)网络中产生了冲突</p><p>那么让我们看看怎么解决.</p><ul><li>下载 <code>root explorer</code> </li><li>使用 <code>root explorer</code> 赋权并打开/修改手机文件 <code>/system/etc/firmware/wlan/qca_cal/wlan_mac.bin</code></li><li>我这里原来是空白的,所以直接添加 <code>Intf0MacAddress=000AF58989CC</code> (等号后面是你要换成的 mac 地址,没有冒号)</li><li>最后修改一下文件权限,<strong>将写入权限去掉,防止被改回</strong></li></ul><p>关掉 wifi 重连一下试试, aha~ 网络冲突没有了, 终于可以安心的连公司 wifi 上网了.</p>]]></content>
     
     <summary type="html">
     
@@ -156,9 +156,9 @@
     <link href="http://www.liruibin.cn/2018/12/14/funnyurl/"/>
     <id>http://www.liruibin.cn/2018/12/14/funnyurl/</id>
     <published>2018-12-14T12:43:15.000Z</published>
-    <updated>2018-12-27T04:53:40.283Z</updated>
+    <updated>2019-01-22T13:14:17.063Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><a href="http://www.zhihu.com/question/31120405" target="_blank" rel="noopener">作为一名互联网设计师，你们和程序员都有过什么样的趣事</a></li><li><a href="http://www.zhihu.com/question/29235260#answer-16307347" target="_blank" rel="noopener">中国有哪些好?</a></li><li><a href="https://frontenddev.org/column/ali-11-11-2015/" target="_blank" rel="noopener">2015阿里11.11前端</a></li><li><a href="http://patorjk.com/software/taag/#p=testall&amp;f=Avatar&amp;t=Rubin" target="_blank" rel="noopener">ASCII画图</a></li><li><a href="https://3v4l.org/" target="_blank" rel="noopener">PHP在线运行</a></li><li><a href="http://www.llang.net/sudoku/calsudoku.html" target="_blank" rel="noopener">数独求解</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><a href="http://www.zhihu.com/question/31120405" target="_blank" rel="noopener">作为一名互联网设计师，你们和程序员都有过什么样的趣事</a></li><li><a href="http://www.zhihu.com/question/29235260#answer-16307347" target="_blank" rel="noopener">中国有哪些好?</a></li><li><a href="https://frontenddev.org/column/ali-11-11-2015/" target="_blank" rel="noopener">2015阿里11.11前端</a></li><li><a href="http://patorjk.com/software/taag/#p=testall&amp;f=Avatar&amp;t=Rubin" target="_blank" rel="noopener">ASCII画图</a></li><li><a href="https://3v4l.org/" target="_blank" rel="noopener">PHP在线运行</a></li><li><a href="http://www.llang.net/sudoku/calsudoku.html" target="_blank" rel="noopener">数独求解</a></li><li><a href="https://regex101.com/" target="_blank" rel="noopener">正则</a></li></ul>]]></content>
     
     <summary type="html">
     
