@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.liruibin.cn/2018/11/10/usefulTools/</loc>
+    
+    <lastmod>2019-01-30T14:08:53.082Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.liruibin.cn/2018/12/14/funnyurl/</loc>
     
     <lastmod>2019-01-28T15:01:56.486Z</lastmod>
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://www.liruibin.cn/2018/11/10/usefulTools/</loc>
-    
-    <lastmod>2018-11-29T01:35:03.200Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.liruibin.cn/2018/11/15/declareVariableBetweenPHP5AndPHP7/</loc>
     
     <lastmod>2018-11-15T04:06:07.737Z</lastmod>
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>http://www.liruibin.cn/tags/index.html</loc>
+    <loc>http://www.liruibin.cn/project/index.html</loc>
     
     <lastmod>2018-11-09T09:14:52.148Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.liruibin.cn/project/index.html</loc>
+    <loc>http://www.liruibin.cn/tags/index.html</loc>
     
     <lastmod>2018-11-09T09:14:52.148Z</lastmod>
     
