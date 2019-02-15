@@ -174,9 +174,9 @@
       <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="flutter" scheme="http://www.liruibin.cn/tags/flutter/"/>
-    
       <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="flutter" scheme="http://www.liruibin.cn/tags/flutter/"/>
     
   </entry>
   
@@ -257,11 +257,11 @@
       <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
-    
       <category term="frp" scheme="http://www.liruibin.cn/tags/frp/"/>
     
       <category term="proxy" scheme="http://www.liruibin.cn/tags/proxy/"/>
+    
+      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
