@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2019-01-25T14:01:46.437Z</updated>
+  <updated>2019-02-15T13:09:22.087Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git pull 中文文件名显示乱码</title>
+    <link href="http://www.liruibin.cn/2019/02/15/gitunicode/"/>
+    <id>http://www.liruibin.cn/2019/02/15/gitunicode/</id>
+    <published>2019-02-15T13:00:49.000Z</published>
+    <updated>2019-02-15T13:09:22.087Z</updated>
+    
+    <content type="html"><![CDATA[<p>有些文档在 git 仓库以中文名的方式存储,但是每次更新 <code>git pull</code> 的时候显示如 “\123\234\124.doc” 看起来很不直观.</p><p>我们使用如下两条命令来使其显示正常的中文名称:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.quotePath false</span><br><span class="line">git config --global core.precomposeunicode true</span><br></pre></td></tr></table></figure></p><p>其实相当于在自己的 <code>gitconfig</code> 配置中 [core] 选项下 手动添加两个选项</p><p>$ cat ~/.gitconfig<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[core]</span><br><span class="line">quotepath = false</span><br><span class="line">precomposeunicode = true</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有些文档在 git 仓库以中文名的方式存储,但是每次更新 &lt;code&gt;git pull&lt;/code&gt; 的时候显示如 “\123\234\124.doc” 看起来很不直观.&lt;/p&gt;
+&lt;p&gt;我们使用如下两条命令来使其显示正常的中文名称:&lt;br&gt;&lt;figure class=&quot;hi
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="git" scheme="http://www.liruibin.cn/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>怎么在苹果美区 App Store 购买付费 APP?</title>
@@ -174,9 +202,9 @@
       <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
-    
       <category term="flutter" scheme="http://www.liruibin.cn/tags/flutter/"/>
+    
+      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
@@ -257,11 +285,11 @@
       <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
+      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
       <category term="frp" scheme="http://www.liruibin.cn/tags/frp/"/>
     
       <category term="proxy" scheme="http://www.liruibin.cn/tags/proxy/"/>
-    
-      <category term="配置" scheme="http://www.liruibin.cn/tags/%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
