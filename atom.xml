@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2019-02-15T13:09:22.087Z</updated>
+  <updated>2019-02-16T09:05:14.821Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修改已提交的 git commit 信息</title>
+    <link href="http://www.liruibin.cn/2019/02/16/editgitcommit/"/>
+    <id>http://www.liruibin.cn/2019/02/16/editgitcommit/</id>
+    <published>2019-02-16T08:48:01.000Z</published>
+    <updated>2019-02-16T09:05:14.821Z</updated>
+    
+    <content type="html"><![CDATA[<p>git commit 信息 push 之后,如果想修改了怎么办?</p><p>试试下面几条命令</p><ol><li>$ <code>git rebase -i head~1</code> // 想修改倒数第几条记录就将数字替换成几, 这里我们修改最后一条</li><li>弹出内容中我们把 pick 修改为 e 并保存退出<br><img src="http://images.unixcx.com/gitrebase.png" alt="gitrebase"></li><li>根据提示输入 $ <code>git commit --amend</code> 继续并在弹出内容中修改注释<br><img src="http://images.unixcx.com/gitrebase_2.png" alt="gitrebase_2"></li><li>保存退出</li><li>执行 $ <code>git rebase --continue</code></li><li>执行 $ <code>git push -f</code> 推送到服务器</li></ol><p>总结一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i head~1</span><br><span class="line">git commit --amend</span><br><span class="line">git rebase --continue</span><br><span class="line">git push -f</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;git commit 信息 push 之后,如果想修改了怎么办?&lt;/p&gt;
+&lt;p&gt;试试下面几条命令&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$ &lt;code&gt;git rebase -i head~1&lt;/code&gt; // 想修改倒数第几条记录就将数字替换成几, 这里我们修改最后一条&lt;/li&gt;
+
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.liruibin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="技巧" scheme="http://www.liruibin.cn/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="git" scheme="http://www.liruibin.cn/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>git pull 中文文件名显示乱码</title>
