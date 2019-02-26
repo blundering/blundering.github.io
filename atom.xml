@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2019-02-26T13:25:23.435Z</updated>
+  <updated>2019-02-26T13:28:29.797Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.liruibin.cn/2019/02/26/aboutTransformLunarAndSolar/"/>
     <id>http://www.liruibin.cn/2019/02/26/aboutTransformLunarAndSolar/</id>
     <published>2019-02-26T13:07:19.000Z</published>
-    <updated>2019-02-26T13:25:23.435Z</updated>
+    <updated>2019-02-26T13:28:29.797Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.jjonline.cn/userInterFace/173.html" target="_blank" rel="noopener">网上的阴历阳历转换大多都来自这段代码</a></p><p>有的人说转换的不太准确 比如阳历1996年7月15日转为阴历是1996-06-01, 但是阴历1996-05-30转为阳历是1996年7月15.</p><p>分析一下 应该是 “农历1900-2100的润大小信息表” lunarInfo 找到1996代表的年份数据0x055c0.<br>但是 0x55c0 到底代表什么呢? 貌似作者也没写 我们来猜一下.<br>转为2进制 0x055c0 =&gt; 0x55c0 =&gt; 0101 0101 1100 0000<br>根据二进制猜一下 左12位代表 12个月份, 0代表小月29天,1代表大约30天. 找个日历看看<a href="https://data.weather.gov.hk/gts/time/calendar/text/T1996c.txt" target="_blank" rel="noopener">1996日历</a><br>发现 5,6,7,8月份天数不对, 正确的大小月二进制应该是 0101 1010 1100, 后4bit我们还保留后面再讨论.<br>那1996对应的正确数据应该是 0x05ac0.</p><p>我们知道了中间12bit的含义 那前4位和后4位分别代表什么呢?</p><p>我们再来找个有代表性的年份 2017 他对应的数据是:<br>0x15176 =&gt; 0001 0101 0001 0111 0110</p><p>分析日历发现2017年阴历闰6月大, 也就是说2017阴历有两个6月,并且第二个6月是大月30天.<br>那我们再来结合数据0x15176的二进制猜一下<br>                   0001      0101 0001 0111     0110<br>                    ↓              ↓             ↓<br>闰月大,第二个闰月是30天  2,4,8,10,11,12大月30天 闰6月(两个6月)</p><p>这样再有天数不准确的我们就可以试着自己对比一下数据,修改一下了.<br>… 今天太晚了 我们就先分析到这里吧… 下班闪人</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.jjonline.cn/userInterFace/173.html" target="_blank" rel="noopener">网上的阴历阳历转换大多都来自这段代码</a></p><p>有的人说转换的不太准确 比如阳历1996年7月15日转为阴历是1996-06-01, 但是阴历1996-05-30转为阳历是1996年7月15.</p><p>分析一下 应该是 “农历1900-2100的润大小信息表” lunarInfo 找到1996代表的年份数据0x055c0.<br>但是 0x55c0 到底代表什么呢? 貌似作者也没写 我们来猜一下.<br>转为2进制 0x055c0 =&gt; 0x55c0 =&gt; 0101 0101 1100 0000<br>根据二进制猜一下 左12位代表 12个月份, 0代表小月29天,1代表大约30天. 找个日历看看<a href="https://data.weather.gov.hk/gts/time/calendar/text/T1996c.txt" target="_blank" rel="noopener">1996日历</a><br>发现 5,6,7,8月份天数不对, 正确的大小月二进制应该是 0101 1010 1100, 后4bit我们还保留后面再讨论.<br>那1996对应的正确数据应该是0101 1010 1100 0000 =&gt;  0x05ac0.</p><p>我们知道了中间12bit的含义 那前4位和后4位分别代表什么呢?</p><p>我们再来找个有代表性的年份 2017 他对应的数据是:<br>0x15176 =&gt; 0001 0101 0001 0111 0110</p><p>分析日历发现2017年阴历闰6月大, 也就是说2017阴历有两个6月,并且第二个6月是大月30天.<br>那我们再来结合数据0x15176的二进制猜一下</p><pre><code>                   0001      0101 0001 0111     0110                    ↓              ↓             ↓闰月大,第二个闰月是30天  2,4,8,10,11,12大月30天 闰6月(两个6月)</code></pre><p>这样再有天数不准确的我们就可以试着自己对比一下数据,修改一下了.<br>… 今天太晚了 我们就先分析到这里吧… 下班闪人</p>]]></content>
     
     <summary type="html">
     
