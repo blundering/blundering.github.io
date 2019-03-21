@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liruibin.cn/"/>
-  <updated>2019-03-21T12:19:32.012Z</updated>
+  <updated>2019-03-21T12:20:18.724Z</updated>
   <id>http://www.liruibin.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>makeAComposerPackage</title>
+    <title>创建一个 PHP Composer 扩展包</title>
     <link href="http://www.liruibin.cn/2019/03/21/makeAComposerPackage/"/>
     <id>http://www.liruibin.cn/2019/03/21/makeAComposerPackage/</id>
     <published>2019-03-21T12:02:40.000Z</published>
-    <updated>2019-03-21T12:19:32.012Z</updated>
+    <updated>2019-03-21T12:20:18.724Z</updated>
     
     <content type="html"><![CDATA[<p>几年前群里某 PHP 大神说, Composer 是啥破玩意儿,我们自己写的框架要啥有啥,需要这个么?</p><p>几个月后大神在群里说: Composer 真香.</p><p>这就勾起小菜鸟的兴趣了,传说中的 Composer 到底是啥乜?</p><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Composer 是 PHP 的一个依赖管理工具。它允许你申明项目所依赖的代码库，它会在你的项目中为你安装他们。</p><hr><p>简单点说就是一个可以帮你在项目中自由安装别人写好的工具类库的工具.</p><p>​    比如你需要一个获取 xxx 平台 xx 服务的功能,你可以直接使用 Composer,将别人写好的包安装到你的项目中,然后就可以像使用 PHP 内置函数/类一样方便的使用这个功能了.</p><h3 id="怎么用"><a href="#怎么用" class="headerlink" title="怎么用"></a>怎么用</h3><p>请去<a href="https://www.baidu.com" target="_blank" rel="noopener">baidu</a>搜索.</p><h3 id="怎么写-关键字提取"><a href="#怎么写-关键字提取" class="headerlink" title="怎么写(关键字提取)"></a>怎么写(关键字提取)</h3><ol><li><p>创建目录</p></li><li><p>初始化项目[composer init (composer.json)]</p></li><li><p>正常编码[安装依赖/敲代码]</p></li><li><p>测试,格式等…</p></li><li><p>发布上线</p><p><img src="http://images.unixcx.com/编写一个 Composer 包.png" alt="编写一个 Composer 包"></p></li></ol><p><a href="https://learnku.com/courses/creating-package/" target="_blank" rel="noopener">创建扩展包相关教程</a></p>]]></content>
     
