@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.liruibin.cn/2019/03/21/makeAComposerPackage/</loc>
+    
+    <lastmod>2019-03-21T12:19:32.012Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.liruibin.cn/2018/11/10/usefulTools/</loc>
     
     <lastmod>2019-03-19T13:03:19.578Z</lastmod>
@@ -142,13 +149,6 @@
   </url>
   
   <url>
-    <loc>http://www.liruibin.cn/project/index.html</loc>
-    
-    <lastmod>2018-11-09T09:14:52.148Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.liruibin.cn/about/index.html</loc>
     
     <lastmod>2018-11-09T09:14:52.148Z</lastmod>
@@ -157,6 +157,13 @@
   
   <url>
     <loc>http://www.liruibin.cn/tags/index.html</loc>
+    
+    <lastmod>2018-11-09T09:14:52.148Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.liruibin.cn/project/index.html</loc>
     
     <lastmod>2018-11-09T09:14:52.148Z</lastmod>
     
